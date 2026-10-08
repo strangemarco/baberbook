@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BarberBook | Barbería Premium</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top premium-navbar">
+        <div class="container">
+            <a class="navbar-brand text-gold brand-font" href="index.html">
+                <i class="fa-solid fa-scissors me-2"></i>BARBERBOOK
+            </a>
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/servicios.html">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/barberos.html">Barberos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/mis-citas.html">Mis Citas</a>
+                    </li>
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <a class="btn btn-gold" href="pages/reservar.html">Reservar Cita</a>
+                    </li>
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <a class="nav-link text-muted" href="pages/admin/dashboard.html" title="Panel Administrativo"><i class="fa-solid fa-lock"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section d-flex align-items-center justify-content-center text-center">
+        <div class="hero-overlay"></div>
+        <div class="container position-relative z-1 hero-content">
+            <h1 class="display-3 brand-font text-white mb-3">La Excelencia en el Grooming</h1>
+            <p class="lead text-light mb-5 fs-4">Tradición, estilo y un servicio impecable en cada corte.</p>
+            <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                <a href="pages/reservar.html" class="btn btn-gold btn-lg py-3 px-5 text-uppercase fw-bold">Agenda tu Cita</a>
+                <a href="pages/servicios.html" class="btn btn-outline-light btn-lg py-3 px-5 text-uppercase">Nuestros Servicios</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Destacados / Features -->
+    <section class="py-5 feature-section bg-darker">
+        <div class="container py-4">
+            <div class="row g-4 text-center">
+                <div class="col-md-4">
+                    <div class="feature-card p-4">
+                        <i class="fa-solid fa-clock fs-1 text-gold mb-3"></i>
+                        <h4 class="brand-font text-white">Puntualidad</h4>
+                        <p class="text-muted">Respetamos tu tiempo. Nuestro sistema de citas garantiza cero demoras.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card p-4">
+                        <i class="fa-solid fa-user-tie fs-1 text-gold mb-3"></i>
+                        <h4 class="brand-font text-white">Expertos</h4>
+                        <p class="text-muted">Barberos de primer nivel, en constante formación con las últimas tendencias.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card p-4">
+                        <i class="fa-solid fa-spray-can fs-1 text-gold mb-3"></i>
+                        <h4 class="brand-font text-white">Productos Premium</h4>
+                        <p class="text-muted">Utilizamos las mejores marcas para el cuidado del cabello y la barba.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section py-5 bg-black border-top border-gold">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6">
+                    <a class="navbar-brand text-gold brand-font fs-3 d-inline-block mb-3" href="#">
+                        <i class="fa-solid fa-scissors me-2"></i>BARBERBOOK
+                    </a>
+                    <p class="text-muted">Elevando el estándar de las barberías. Tu estilo es nuestra obra maestra.</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="text-white mb-3">Enlaces</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="pages/servicios.html">Servicios</a></li>
+                        <li><a href="pages/barberos.html">Barberos</a></li>
+                        <li><a href="pages/reservar.html">Reservar</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-3">Horarios</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li class="d-flex justify-content-between mb-2"><span>Lunes - Viernes:</span> <span>09:00 - 20:00</span></li>
+                        <li class="d-flex justify-content-between mb-2"><span>Sábado:</span> <span>09:00 - 18:00</span></li>
+                        <li class="d-flex justify-content-between"><span>Domingo:</span> <span class="text-gold">Cerrado</span></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-3">Contacto</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-2"><i class="fa-solid fa-location-dot me-2 text-gold"></i> Av. Principal 123, Ciudad</li>
+                        <li class="mb-2"><i class="fa-solid fa-phone me-2 text-gold"></i> +1 234 567 890</li>
+                        <li><i class="fa-solid fa-envelope me-2 text-gold"></i> info@barberbook.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-12 text-center text-muted border-top border-secondary pt-4">
+                    <p class="mb-0">&copy; 2026 BarberBook. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/storage.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
