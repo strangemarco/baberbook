@@ -56,7 +56,30 @@ document.addEventListener('DOMContentLoaded', function() {
         events: events,
         eventClick: function(info) {
             const props = info.event.extendedProps;
-            alert(`Cliente: ${info.event.title.split(' - ')[0]}\nServicio: ${info.event.title.split(' - ')[1]}\nBarbero: ${props.barbero}\nTeléfono: ${props.telefono}\nEstado: ${props.estado}`);
+            const titleParts = info.event.title.split(' - ');
+            
+            // Populate modal fields
+            document.getElementById('modalCliente').textContent = titleParts[0] || 'Desconocido';
+            document.getElementById('modalServicio').textContent = titleParts[1] || 'Cita';
+            document.getElementById('modalBarbero').textContent = props.barbero;
+            document.getElementById('modalTelefono').textContent = props.telefono || 'No registrado';
+            
+            const estadoSpan = document.getElementById('modalEstado');
+            estadoSpan.textContent = props.estado;
+            
+            // Set badge color based on state
+            estadoSpan.className = 'badge text-uppercase ms-2'; // reset
+            if(props.estado === 'completada') {
+                estadoSpan.classList.add('bg-success');
+            } else if(props.estado === 'cancelada') {
+                estadoSpan.classList.add('bg-danger');
+            } else {
+                estadoSpan.classList.add('bg-warning', 'text-dark');
+            }
+
+            // Show modal
+            const citaModal = new bootstrap.Modal(document.getElementById('citaModal'));
+            citaModal.show();
         }
     });
 

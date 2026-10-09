@@ -50,10 +50,27 @@
         }
         .fc-event {
             border: none;
-            border-radius: 4px;
-            padding: 2px 4px;
+            border-radius: 8px;
+            padding: 6px 8px;
             cursor: pointer;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+            transition: transform 0.2s;
+        }
+        .fc-event:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.5);
+        }
+        .fc-event-time {
+            font-weight: bold;
+            color: rgba(0,0,0,0.7) !important;
+            margin-bottom: 2px;
+        }
+        .fc-event-title {
+            font-weight: 600;
+            color: #151515 !important;
+            font-size: 0.95rem;
+            line-height: 1.2;
+            white-space: normal; /* Permite saltos de línea para que se lea mejor */
         }
     </style>
 </head>
@@ -122,6 +139,44 @@
             <div id='calendar'></div>
         </div>
     </div>
+
+    <!-- Modal Detalles de Cita -->
+    <div class="modal fade" id="citaModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="background-color: var(--bg-black, #151515); border: 1px solid rgba(201, 163, 91, 0.3);">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title" style="color: #C9A35B; font-family: 'Cinzel', serif;">Detalles de la Cita</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-white">
+                    <ul class="list-group list-group-flush rounded" style="background-color: rgba(255,255,255,0.05);">
+                        <li class="list-group-item bg-transparent text-white border-secondary">
+                            <i class="fa-solid fa-user me-2" style="color: #C9A35B;"></i> <strong>Cliente:</strong> <span id="modalCliente"></span>
+                        </li>
+                        <li class="list-group-item bg-transparent text-white border-secondary">
+                            <i class="fa-solid fa-scissors me-2" style="color: #C9A35B;"></i> <strong>Servicio:</strong> <span id="modalServicio"></span>
+                        </li>
+                        <li class="list-group-item bg-transparent text-white border-secondary">
+                            <i class="fa-solid fa-user-tie me-2" style="color: #C9A35B;"></i> <strong>Barbero:</strong> <span id="modalBarbero"></span>
+                        </li>
+                        <li class="list-group-item bg-transparent text-white border-secondary">
+                            <i class="fa-solid fa-phone me-2" style="color: #C9A35B;"></i> <strong>Teléfono:</strong> <span id="modalTelefono"></span>
+                        </li>
+                        <li class="list-group-item bg-transparent text-white border-secondary">
+                            <i class="fa-solid fa-calendar-check me-2" style="color: #C9A35B;"></i> <strong>Estado:</strong> <span id="modalEstado" class="badge bg-secondary text-uppercase ms-2"></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer border-secondary">
+                    <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cerrar</button>
+                    <!-- Aquí podrías poner botones de Editar/Cancelar cita en el futuro -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- FullCalendar JS -->
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js'></script>
