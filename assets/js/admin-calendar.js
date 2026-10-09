@@ -54,6 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
         slotMinTime: '08:00:00',
         slotMaxTime: '21:00:00',
         allDaySlot: false,
+        eventDisplay: 'block', // Fuerza a que en la vista Mes se vean como bloques con color de fondo
         events: events,
         eventClick: function(info) {
             const props = info.event.extendedProps;
