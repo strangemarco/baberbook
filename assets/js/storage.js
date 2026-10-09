@@ -26,6 +26,21 @@ const inicializarDatos = () => {
     if (!localStorage.getItem('citas')) {
         localStorage.setItem('citas', JSON.stringify([]));
     }
+
+    // Cupones de descuento iniciales
+    if (!localStorage.getItem('cupones')) {
+        const cupones = [
+            { codigo: 'BARBER10', descuento: 0.10, activo: true },
+            { codigo: 'VIP20', descuento: 0.20, activo: true },
+            { codigo: 'VERANO15', descuento: 0.15, activo: true }
+        ];
+        localStorage.setItem('cupones', JSON.stringify(cupones));
+    }
+
+    // Clientes (para sistema de fidelización por puntos)
+    if (!localStorage.getItem('clientes')) {
+        localStorage.setItem('clientes', JSON.stringify([]));
+    }
 };
 
 // Inicializar al cargar
