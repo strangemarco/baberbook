@@ -50,27 +50,47 @@
         }
         .fc-event {
             border: none;
-            border-radius: 8px;
-            padding: 6px 8px;
+            border-radius: 4px;
             cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.4);
-            transition: transform 0.2s;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+            overflow: hidden;
+        }
+        .fc-v-event { /* Semana y Día */
+            padding: 2px 4px;
+        }
+        .fc-daygrid-event { /* Mes */
+            padding: 2px 4px;
         }
         .fc-event:hover {
             transform: scale(1.02);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.5);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+            z-index: 10 !important;
         }
         .fc-event-time {
             font-weight: bold;
-            color: rgba(0,0,0,0.7) !important;
-            margin-bottom: 2px;
+            color: rgba(0,0,0,0.8) !important;
+            font-size: 0.75rem;
+            margin-bottom: 1px;
         }
         .fc-event-title {
             font-weight: 600;
             color: #151515 !important;
-            font-size: 0.95rem;
-            line-height: 1.2;
-            white-space: normal; /* Permite saltos de línea para que se lea mejor */
+            font-size: 0.8rem;
+            line-height: 1.1;
+        }
+        
+        /* En modo mes, no hacer wrap para no desbordar */
+        .fc-daygrid-event .fc-event-title {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* En modo semana/día, hacer wrap pero ocultar excedente */
+        .fc-v-event .fc-event-title {
+            white-space: normal;
+            overflow: hidden;
         }
     </style>
 </head>
