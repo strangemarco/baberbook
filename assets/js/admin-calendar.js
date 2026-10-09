@@ -25,7 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
         if (servicio && servicio.duracion) {
             const startDate = new Date(startDateTime);
             const endDate = new Date(startDate.getTime() + servicio.duracion * 60000);
-            endDateTime = endDate.toISOString().slice(0, 19);
+            const pad = n => n.toString().padStart(2, '0');
+            endDateTime = `${endDate.getFullYear()}-${pad(endDate.getMonth() + 1)}-${pad(endDate.getDate())}T${pad(endDate.getHours())}:${pad(endDate.getMinutes())}:00`;
         }
 
         return {
