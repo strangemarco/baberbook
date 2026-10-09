@@ -61,6 +61,14 @@
 [data-theme="light"] .admin-sidebar {
     background-color: #FFFFFF;
 }
+[data-theme="light"] #theme-toggle {
+    color: var(--white) !important;
+    border-color: var(--white) !important;
+}
+[data-theme="light"] #theme-toggle:hover {
+    background-color: var(--white) !important;
+    color: var(--bg-black) !important;
+}
 
 body {
     background-color: var(--bg-black);
