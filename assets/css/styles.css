@@ -46,8 +46,8 @@
     color: var(--white) !important;
 }
 [data-theme="light"] .premium-navbar {
-    background-color: rgba(245, 240, 232, 0.95);
-    border-bottom: 1px solid rgba(201, 163, 91, 0.4);
+    background-color: rgba(245, 240, 232, 0.98) !important;
+    border-bottom: 1px solid rgba(201, 163, 91, 0.4) !important;
 }
 [data-theme="light"] .hero-section .text-white,
 [data-theme="light"] .hero-section .text-light,
