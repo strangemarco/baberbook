@@ -50,10 +50,27 @@
                     <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
                         <a class="nav-link text-muted" href="pages/admin/dashboard.html" title="Panel Administrativo"><i class="fa-solid fa-lock"></i></a>
                     </li>
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <button id="theme-toggle" class="btn btn-outline-light rounded-circle" style="width: 40px; height: 40px; padding: 0;" onclick="toggleTheme()" title="Cambiar Tema">
+                            <i class="fa-solid fa-moon"></i>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
+
+    <script>
+        // Set initial icon on load based on theme
+        document.addEventListener('DOMContentLoaded', () => {
+            const current = document.documentElement.getAttribute('data-theme');
+            const icon = document.querySelector('#theme-toggle i');
+            if(icon && current === 'light') {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            }
+        });
+    </script>
 
     <!-- Hero Section -->
     <header class="hero-section d-flex align-items-center justify-content-center text-center">

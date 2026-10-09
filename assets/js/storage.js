@@ -1,5 +1,28 @@
 // storage.js - Manejo de datos con localStorage
 
+// Inicializar tema de inmediato para evitar parpadeos
+const currentTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', currentTheme);
+
+const toggleTheme = () => {
+    const theme = document.documentElement.getAttribute('data-theme');
+    const newTheme = theme === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    
+    // Update toggle icon if exists
+    const icon = document.querySelector('#theme-toggle i');
+    if (icon) {
+        if (newTheme === 'light') {
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        } else {
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+        }
+    }
+};
+
 const inicializarDatos = () => {
     // Servicios iniciales
     if (!localStorage.getItem('servicios')) {

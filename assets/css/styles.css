@@ -19,6 +19,49 @@
     --font-body: 'Inter', sans-serif;
 }
 
+[data-theme="light"] {
+    --bg-black: #F5F0E8;
+    --bg-darker: #FFFFFF;
+    --off-white: #151515;
+    --white: #282828;
+    /* Hero section text should probably stay white because of the dark overlay, but we'll leave it simple for now */
+}
+
+/* Override Bootstrap Utility Classes for Light Theme */
+[data-theme="light"] .text-white,
+[data-theme="light"] .text-light {
+    color: var(--white) !important;
+}
+[data-theme="light"] .bg-black {
+    background-color: var(--bg-black) !important;
+}
+[data-theme="light"] .bg-dark {
+    background-color: var(--bg-darker) !important;
+}
+[data-theme="light"] .text-muted {
+    color: #666666 !important;
+}
+[data-theme="light"] .form-control,
+[data-theme="light"] .form-select {
+    color: var(--white) !important;
+}
+[data-theme="light"] .premium-navbar {
+    background-color: rgba(245, 240, 232, 0.95);
+    border-bottom: 1px solid rgba(201, 163, 91, 0.4);
+}
+[data-theme="light"] .hero-section .text-white,
+[data-theme="light"] .hero-section .text-light,
+[data-theme="light"] .hero-section p {
+    color: #FFFFFF !important;
+}
+[data-theme="light"] .footer-section .text-muted {
+    color: #888888 !important;
+}
+[data-theme="light"] .admin-card,
+[data-theme="light"] .admin-sidebar {
+    background-color: #FFFFFF;
+}
+
 body {
     background-color: var(--bg-black);
     color: var(--off-white);
